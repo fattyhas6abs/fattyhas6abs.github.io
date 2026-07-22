@@ -52,13 +52,32 @@ a {
   position: absolute;
   left: 50%;
   transform: translateX(-50%);
+  max-width: calc(100% - 180px);
 }
 
-.logo {
-  font-family: "Great Vibes", cursive;
-  font-size: 2rem;
-  letter-spacing: 0.5px;
-  color: #111;
+.brand-icon,
+.text-logo {
+  display: flex;
+  align-items: center;
+  transition: opacity 0.2s ease;
+}
+
+.brand-icon:hover,
+.text-logo:hover {
+  opacity: 0.7;
+}
+
+.brand-icon img {
+  height: 28px;
+  width: auto;
+  display: block;
+}
+
+.text-logo img {
+  height: 38px;
+  width: auto;
+  max-width: 100%;
+  display: block;
 }
 
 .nav-icon {
@@ -96,8 +115,12 @@ a {
     padding: 0 16px;
   }
 
-  .logo {
-    font-size: 1.6rem;
+  .brand-icon img {
+    height: 24px;
+  }
+
+  .text-logo img {
+    height: 30px;
   }
 
   .nav-left,
